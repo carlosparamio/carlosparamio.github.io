@@ -1,0 +1,70 @@
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.1.0
+build: 2026
+reset, fonts, and base
+*/
+html{color:#000;background:#fff;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+h1{font-size:138.5%;}h2{font-size:123.1%;}h3{font-size:108%;}h1,h2,h3{margin:1em 0;}h1,h2,h3,h4,h5,h6,strong{font-weight:bold;}abbr,acronym{border-bottom:1px dotted #000;cursor:help;}em{font-style:italic;}blockquote,ul,ol,dl{margin:1em;}ol,ul,dl{margin-left:2em;}ol li{list-style:decimal outside;}ul li{list-style:disc outside;}dl dd{margin-left:1em;}th,td{border:1px solid #000;padding:.5em;}th{font-weight:bold;text-align:center;}caption{margin-bottom:.5em;text-align:center;}p,fieldset,table,pre{margin-bottom:1em;}input[type=text],input[type=password],textarea{width:12.25em;*width:11.9em;}
+
+html { background-color: #fff; color: #fff;}
+body { font: 14px/22px Helvetica, Arial, Verdana, sans-serif; text-shadow: rgba(0,0,0,0.5) 0 1px 1px; background: #85a7e8 url(images/clouds.png) center bottom repeat-x;}
+a { text-decoration: none; color: #ffe17d;}
+a:hover { color: #fff; border-bottom: 1px dotted #fff; text-decoration: none;}
+img { -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;}
+
+.amp { font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif; font-style: italic; font-weight: normal;}
+
+#wrapper { width: 960px; margin: 0 auto; padding-top: 30px; overflow: hidden;}
+header { width: 130px; float: left; margin-top: 106px;}
+section { width: 610px; float: left; margin: 0 20px;}
+aside { width: 180px; float: left; margin-top: 106px;}
+footer { width: 960px; clear: both; float: left; position: relative; height: 284px; padding-top: 40px; color: #d3dfeb; text-shadow: none;}
+
+header nav ul { margin:0; padding:0; width:130px; }
+header nav ul li { margin: 0 0 20px 0; padding:0; list-style: none; text-align: right; text-transform: lowercase;}
+header nav ul li strong { font-size: 24px; display: block; font-family: "Arial Rounded MT Bold", Helvetica, Arial, Verdana, sans-serif;}
+header nav ul li a:hover { border-bottom: none;}
+
+section h1 { text-align: center; height:36px; line-height:36px; font-size: 26px; text-transform: lowercase; font-family: "Arial Rounded MT Bold", Helvetica, Arial, Verdana, sans-serif;}
+
+aside h2 { font-size: 24px; text-transform: lowercase; font-weight: normal; margin-top: 0;}
+
+.slogan { clear: both; height: 60px; margin: 0 0 20px 0; padding: 0; font-size: 20px; background: transparent url(images/ornaments.png) 50% 50% no-repeat; line-height: 60px; text-align: center;}
+
+.previews { padding: 20px; background-color: #718ec5; overflow: hidden; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;}
+.previews .preview { float: left; width: 270px; height: 300px; margin-bottom: 25px;}
+.previews .first, .previews .third { margin-right: 25px;}
+.previews p { margin: 0;}
+.preview h3 { margin: 5px 0; }
+
+.recent-works { margin-bottom: 40px;}
+.recent-works ol { margin: 0; padding: 0;}
+.recent-works ol li { list-style: none; margin-bottom: 15px; overflow: hidden;}
+.recent-works .work-title { float: right; width: 130px; text-align: left; margin: 0;}
+.recent-works .work-thumb { float: left; width: 40px; margin: 0; padding-right: 10px; }
+.recent-works .work-summary { float: right; width: 130px; text-align: left; margin: 0;}
+
+.open-source-projects { margin-bottom: 40px;}
+.open-source-projects ul { margin: 0; padding: 0;}
+.open-source-projects ul li { list-style: none; margin-bottom: 20px; overflow: hidden;}
+.open-source-projects h3,
+.open-source-projects p { margin: 0;}
+
+footer a { color: #71a9e8; font-weight: bold;}
+footer a:hover { color: #d3dfeb; border-bottom: 1px dotted #d3dfeb; text-decoration: none;}
+footer h2 { font-size: 24px; margin: 0 0 5px 0; text-transform: lowercase;}
+
+#elsewhere { position: absolute; width: 130px; top: 140px; left: 0; padding-top: 50px; text-align: right;}
+#elsewhere ul { margin: 0; padding: 0; text-transform: lowercase;}
+#elsewhere ul li { list-style: none;}
+
+#feeds { position: absolute; width: 130px; top: 140px; left: 0; padding-top: 50px; background: transparent url(images/feed.png) top left no-repeat; text-align: right;}
+#feeds ul { margin: 0; padding: 0; text-transform: lowercase;}
+#feeds ul li { list-style: none;}
+
+#hire-me { position: absolute; width: 180px; top: 140px; right: 0; padding-top: 50px;}
+#copyright { padding-top: 175px; text-align: center; }

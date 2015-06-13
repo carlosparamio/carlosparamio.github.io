@@ -1,0 +1,14 @@
+# Site settings
+title: I Develop Smart And Usable Web Apps - Carlos Paramio
+email: hola@carlosparamio.com
+description: "Ruby on Rails, Web Design, Web Development and iPhone Development"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://carlosparamio.com" # the base hostname & protocol for your site
+twitter_username: carlosparamio
+linkedin_username: carlosparamio
+github_username: carlosparamio
+
+# Build settings
+markdown: kramdown
+sass:
+  style: :compressed

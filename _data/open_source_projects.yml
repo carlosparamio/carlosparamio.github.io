@@ -1,0 +1,19 @@
+- name: lita-ey-tools
+  description: A Lita handler that provides some EngineYard tools like database dump.
+  url: https://github.com/carlosparamio/lita-ey-tools
+
+- name: lita-chm
+  description: Lita plugin to shows a short history lesson of the day from the Computer History Museum.
+  url: https://github.com/carlosparamio/lita-chm
+
+- name: rack-facebook
+  description: Rack middleware to process Facebook requests.
+  url: https://github.com/carlosparamio/rack-facebook
+
+- name: mongo_odm
+  description: Flexible persistence module for any Ruby class to MongoDB.
+  url: https://github.com/carlosparamio/mongo_odm
+
+- name: geoplanet
+  description: A Ruby wrapper for the Yahoo! GeoPlanet API.
+  url: https://github.com/carlosparamio/geoplanet

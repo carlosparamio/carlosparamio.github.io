@@ -1,0 +1,65 @@
+- name: "Christopher Cunningham"
+  position: "Group Technology Director at Huge, NYC"
+  cite: "Carlos is a passionate Rubyist and a pleasure to work with. He knows Ruby and Rails inside-out and always keeps up with current best practices and available libraries. He writes elegant, easy-to-maintain code with excellent test coverage. He's an asset for all levels of product design: user experience, system architecture, test frameworks and code design. He works well remotely and as part of a team and is willing to put in long hours to deliver quality results under pressure. One of the best developers I've worked with; I still refer back to his designs from time to time."
+  avatar: cunningham.jpg
+  url: http://www.linkedin.com/in/ccunningham
+
+- name: "Gabe Zichermann"
+  position: "CEO at Dopamine and Gamification Co, NYC"
+  cite: "Carlos is an enthusiastic, bright and extremely capable developer and team member. In addition to writing great code, Carlos always keeps his ear to the ground about new technologies, marketplace changes and opportunities for the company to evolve and shine, bringing significant added value to his workplace."
+  avatar: zichermann.jpg
+  url: http://www.linkedin.com/in/gzicherm
+
+- name: "Norbert Brunner"
+  position: "Digital Development Manager at Betvictor, Gibraltar"
+  cite: "Eloquent in Ruby and armed with a methodological approach to software development, Carlos' ability to provide simple and elegant solutions to complex problems made him a valuable member of the web development team."
+  avatar: brunner.jpg
+  url: https://www.linkedin.com/in/norbertbrunner
+
+- name: "Antonio Santos Velasco"
+  position: "Developer at GitHub, San Francisco"
+  cite: "Carlos is a top-notch developer with a solid knowledge on Ruby, Rails and different frontend technologies, and a great addition to any team. He is detailed and perfectionist, always writing high quality code at a speed of light pace. His greatest skill, though, is that he will increase the team level significantly by spreading his deep knowledge to his peers, and will do that while constantly delivering new functionality."
+  avatar: santos.jpg
+  url: https://www.linkedin.com/in/santosvelasco
+
+- name: "Tieg Zaharia"
+  position: "Developer at Kickstarter, NYC"
+  cite: "Carlos was an excellent programmer to work with, and I gained some great insight from him. He has a great knowledge of Ruby and programming in general has a good attitude; I recommend him as a first choice for your next project."
+  avatar: zaharia.jpg
+  url: http://www.linkedin.com/pub/tieg-zaharia/2/388/987
+
+- name: "Corey Cotter"
+  position: "Manager of Software Development at Mogo, Vancouver"
+  cite: "Carlos is a kick-ass Ruby developer and I was very fortunate to work closely with him."
+  avatar: cotter.jpg
+  url: http://www.linkedin.com/in/coreycotter
+
+- name: "Salim Lakhani"
+  position: "CEO & President at WebEnabled"
+  cite: "I've worked with Carlos on several projects and he does good work and delivers on time."
+  avatar: lakhani.jpg
+  url: http://www.linkedin.com/in/sklakhani
+
+- name: "François Derbaix"
+  position: "Web entrepreneur & business angel, Madrid"
+  cite: "Carlos es nuestro desarrollador front en Voota. Nos vino recomendado por Álvaro Ortiz (furilo) y Juan Leal, y estamos todos muy satisfechos con su trabajo. Si alguien busca un desarrollador front o en Ruby (ambas especialidades de Carlos Paramio) le recomendaría al 100% contactar con él. Muy buen profesional."
+  avatar: derbaix.jpg
+  url: http://www.linkedin.com/in/fderbaix
+
+- name: "Jesús Encinar"
+  position: "CEO at Idealista, Madrid"
+  cite: "Carlos es un gran profesional que sabe cumplir los compromisos que acepta y dar un resultado excelente."
+  avatar: encinar.jpg
+  url: http://www.jesusencinar.com/
+
+- name: "Juan Leal"
+  position: "Product Designer, UX Expert & Business Angel, Madrid"
+  cite: "Trabajar con Carlos da la seguridad de que el proyecto que tienes entre manos va a salir bien. Es muy buen front, pero también se maneja muy bien en back, en apps para Facebook, iPhone y sabe comentar con criterio aspectos relacionados con diseño. Estoy muy contento con su trabajo. Volvería a trabajar con él en cualquier cosa que implique desarrollo."
+  avatar: leal.jpg
+  url: http://www.linkedin.com/in/seisdeagosto
+
+- name: "Sergio Viteri"
+  position: "CEO at Zacatrus, Madrid"
+  cite: "Carlos es un experto desarrollador web. Proactivo, con profundo conocimiento de lo que hace y siempre con una actitud muy positiva. Excelente su trabajo como desarrollador front en Voota."
+  avatar: viteri.jpg
+  url: http://www.linkedin.com/in/sviteri

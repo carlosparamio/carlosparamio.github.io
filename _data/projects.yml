@@ -1,0 +1,15 @@
+- name: HomenetSpain
+  folder: homenetspain
+  summary: Development
+
+- name: Voota
+  folder: voota
+  summary: Frontend Development
+
+- name: Mumumio
+  folder: mumumio
+  summary: Development
+
+- name: Kakoe
+  folder: kakoe
+  summary: Development

@@ -1,0 +1,27 @@
+<aside>
+  <div class="recent-works">
+    <h2>Recent Work</h2>
+    <ol>
+      {% for project in site.data.projects %}
+        <li>
+          <h3 class="work-title"><a href="#">{{ project.name }}</a></h3>
+          <p class="work-thumb"><a href="#"><img src="images/works/{{ project.folder }}/square.png" /></a></p>
+          <p class="work-summary">{{ project.summary }}</p>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  <div class="open-source-projects">
+    <h2>Open Source</h2>
+    <ul>
+      {% for project in site.data.open_source_projects %}
+        <li>
+          <h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
+          <p>{{ project.description }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+    <p><strong><a href="https://github.com/carlosparamio">follow me at github »</a></strong></p>
+  </div>
+</aside>

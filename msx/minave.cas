@@ -1,4 +1,8 @@
 ¦ήΊΜ}tκκκκκκκκκκMINAVE¦ήΊΜ}t10 LET A$="T100L8O4AO5F#EL4F#L8F#O4AO5F#EL4F#L8F#O4AO5F#EL4F#L8F#EF#EL4D"
 20 LET B$="T100L4R4R8O4DRRO3BRRGR8AR8O4D"
-30 PLAY A$,B$
-
+30 LET C$="T100L8AAAL4AL8F#AAAL4AL8F#F#EF#L4GL8GAGAL4F#"
+40 PLAY A$,B$
+50 PLAY A$,B$
+60 PLAY C$,B$
+70 PLAY A$,B$
+

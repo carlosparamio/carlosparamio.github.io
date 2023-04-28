@@ -1,15 +1,19 @@
 - name: HomenetSpain
   folder: homenetspain
   summary: Development
+  url: https://web.archive.org/web/20141003233850/http://homenetspain.com/
 
 - name: Voota
   folder: voota
   summary: Frontend Development
+  url: https://web.archive.org/web/20110615021216/http://voota.es/
 
 - name: Mumumio
   folder: mumumio
   summary: Development
+  url: https://web.archive.org/web/20180224060254/http://www.mumumio.com/
 
 - name: Kakoe
   folder: kakoe
   summary: Development
+  url: https://web.archive.org/web/20110721160643/http://kakoe.es/#!/

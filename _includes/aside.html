@@ -4,8 +4,8 @@
     <ol>
       {% for project in site.data.projects %}
         <li>
-          <h3 class="work-title"><a href="#">{{ project.name }}</a></h3>
-          <p class="work-thumb"><a href="#"><img src="images/works/{{ project.folder }}/square.png" /></a></p>
+          <h3 class="work-title"><a href="{{ project.url}}">{{ project.name }}</a></h3>
+          <p class="work-thumb"><a href="{{ project.url}}"><img src="images/works/{{ project.folder }}/square.png" /></a></p>
           <p class="work-summary">{{ project.summary }}</p>
         </li>
       {% endfor %}

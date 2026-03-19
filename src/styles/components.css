@@ -1,0 +1,303 @@
+/* =============================================================================
+   CARD COMPONENTS
+   Shared styles for card-based UI elements
+   ============================================================================= */
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.logo:hover {
+  color: var(--color-accent);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+}
+
+.nav-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+  transition: color 0.2s;
+  line-height: 1.3;
+}
+
+.nav-link:hover .nav-label {
+  color: var(--color-accent);
+}
+
+.nav-description {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-gray-400);
+  line-height: 1.3;
+}
+
+/* Card base */
+.card {
+  background-color: var(--color-white);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-gray-100);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  transform: translateY(-0.25rem);
+}
+
+/* Service Card */
+.service-icon {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  transition: color 0.2s;
+}
+
+.service-card:hover .service-title {
+  color: var(--color-accent);
+}
+
+.service-description {
+  color: var(--color-gray-600);
+  line-height: 1.625;
+}
+
+/* Testimonial Card */
+.testimonial-avatar {
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  min-height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid var(--color-gray-100);
+}
+
+.testimonial-author {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.testimonial-author:hover {
+  color: var(--color-accent);
+}
+
+.testimonial-quote {
+  color: var(--color-gray-600);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.625;
+}
+
+.testimonial-position {
+  font-size: 0.875rem;
+  color: var(--color-gray-500);
+  margin-top: 0.25rem;
+}
+
+/* Project Card */
+.project-card {
+  display: block;
+  text-decoration: none;
+}
+
+.project-image-container {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: var(--color-gray-100);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-title {
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.project-card:hover .project-title {
+  color: var(--color-accent);
+}
+
+.project-summary {
+  font-size: 0.875rem;
+  color: var(--color-gray-500);
+  margin-top: 0.25rem;
+}
+
+/* OSS Card */
+.oss-card {
+  display: block;
+  background-color: var(--color-white);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-gray-100);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.oss-card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  transform: translateY(-0.25rem);
+}
+
+.oss-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.oss-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: color 0.2s;
+}
+
+.oss-card:hover .oss-card-title {
+  color: var(--color-accent);
+}
+
+.oss-card-icon {
+  font-size: 1rem;
+  color: var(--color-gray-400);
+  transition: color 0.2s;
+}
+
+.oss-card:hover .oss-card-icon {
+  color: var(--color-accent);
+}
+
+.oss-card-description {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  line-height: 1.5;
+}
+
+/* GitHub Button */
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-github:hover {
+  background-color: var(--color-secondary);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.btn-github-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.logo:hover {
+  color: var(--color-accent);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+}
+
+.nav-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+  transition: color 0.2s;
+  line-height: 1.3;
+}
+
+.nav-link:hover .nav-label {
+  color: var(--color-accent);
+}
+
+.nav-description {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-gray-400);
+  line-height: 1.3;
+}

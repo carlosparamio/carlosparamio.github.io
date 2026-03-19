@@ -1,0 +1,25 @@
+---
+interface Props {
+  name: string;
+  summary: string;
+  image: string;
+  url: string;
+}
+
+const { name, summary, image, url } = Astro.props;
+---
+
+<a href={url} target="_blank" rel="noopener noreferrer" class="card project-card">
+  <div class="project-image-container">
+    <img 
+      src={`/images/works/${image}/square.png`}
+      alt={`${name} logo`}
+      class="project-image"
+      loading="lazy"
+      width="48"
+      height="48"
+    />
+  </div>
+  <h3 class="project-title">{name}</h3>
+  <p class="project-summary">{summary}</p>
+</a>

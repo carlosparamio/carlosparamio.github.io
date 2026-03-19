@@ -1,0 +1,26 @@
+---
+const navItems = [
+  { href: '/', label: 'Home', description: 'What I do' },
+  { href: '/about', label: 'About', description: 'Who I am' },
+  { href: '/projects', label: 'Projects', description: 'My work' },
+  { href: '/open-source', label: 'Open Source', description: 'OSS contributions' },
+  { href: '/publications', label: 'Publications', description: 'Books & articles' },
+  { href: '/retro', label: 'Retro', description: 'ZX Spectrum' },
+];
+---
+
+<header class="header">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="/" class="logo">Carlos Paramio</a>
+    <ul class="nav-list">
+      {navItems.map((item) => (
+        <li class="nav-item">
+          <a href={item.href} class="nav-link">
+            <span class="nav-label">{item.label}</span>
+            <span class="nav-description">{item.description}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

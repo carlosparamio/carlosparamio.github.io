@@ -1,0 +1,26 @@
+[
+  {
+    "name": "rack-facebook",
+    "description": "Rack middleware that validates Facebook signatures and converts params to Ruby objects.",
+    "url": "https://github.com/carlosparamio/rack-facebook",
+    "stars": 52
+  },
+  {
+    "name": "mongo_odm",
+    "description": "Flexible persistence module for any Ruby class to MongoDB.",
+    "url": "https://github.com/carlosparamio/mongo_odm",
+    "stars": 41
+  },
+  {
+    "name": "geoplanet",
+    "description": "A Ruby wrapper for the Yahoo! GeoPlanet API.",
+    "url": "https://github.com/carlosparamio/geoplanet",
+    "stars": 26
+  },
+  {
+    "name": "dm-observers",
+    "description": "DataMapper Observers gem for Ruby.",
+    "url": "https://github.com/carlosparamio/dm-observers",
+    "stars": 4
+  }
+]

@@ -1,0 +1,17 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+}
+
+const { name, description, url } = Astro.props;
+---
+
+<a href={url} target="_blank" rel="noopener" class="oss-card">
+  <div class="oss-card-header">
+    <h3 class="oss-card-title">{name}</h3>
+    <span class="oss-card-icon">↗</span>
+  </div>
+  <p class="oss-card-description">{description}</p>
+</a>

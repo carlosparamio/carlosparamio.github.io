@@ -28,6 +28,21 @@ const { title, description = 'Web application development and architecture exper
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <title>{title} | Carlos Paramio</title>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Carlos Paramio",
+      "jobTitle": "Director of Technology",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Avallain"
+      },
+      "url": "https://carlosparamio.com",
+      "sameAs": [
+        "https://github.com/carlosparamio",
+        "https://linkedin.com/in/carlosparamio"
+      ]
+    })} />
     <style is:global>
       :root {
         --color-primary: #1a1a2e;

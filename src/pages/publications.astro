@@ -1,48 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const books = [
-  {
-    title: 'The Value of Memories',
-    year: 2011,
-    description: 'Mankind has an expiration date. Sooner or later, the Universe will erase every trace of our existence. Jesus Blanco desperately seeks a way out of an ending that seems inevitable.',
-    url: 'https://www.amazon.es/value-memories-Carlos-Paramio-Danta/dp/1794342427',
-    type: 'Novel'
-  },
-  {
-    title: 'El valor de los recuerdos',
-    year: 2011,
-    description: 'La humanidad tiene fecha de caducidad. Jesús Blanco busca desesperadamente una salida a un desenlace que parece inevitable.',
-    url: 'https://www.amazon.es/valor-recuerdos-Carlos-Paramio-Danta-ebook/dp/B004KZOPV6',
-    isbn: '978-84-614-6869-0',
-    type: 'Novela'
-  }
-];
-
-const articles = [
-  {
-    title: 'Artículos en Genbeta',
-    publication: 'Genbeta',
-    year: 2011,
-    url: 'https://www.genbeta.com/autor/carlosparamio'
-  },
-  {
-    title: 'Ruby on Rails y otros frameworks de licencia libre',
-    publication: 'Actas de las III Jornadas de Software Libre de la Universidad de Cádiz',
-    isbn: '84-9828-055-9'
-  },
-  {
-    title: 'Herramientas básicas de desarrollo',
-    publication: 'Actas de las II Jornadas Andaluzas de Software Libre',
-    year: 2002,
-    isbn: '84-88783-58-2'
-  },
-  {
-    title: 'Compilando Gnome 2',
-    publication: 'Revista Dlinux',
-    year: 2002
-  }
-];
+import publications from '../data/publications.json';
 ---
 
 <BaseLayout title="Publications" description="Books and articles by Carlos Paramio.">
@@ -56,7 +14,7 @@ const articles = [
 
     <h2 class="text-xl font-bold text-primary mb-6 mt-8">Books</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-      {books.map((book) => (
+      {publications.books.map((book) => (
         <a href={book.url} target="_blank" rel="noopener noreferrer" class="card" style="text-decoration: none;">
           <div class="flex items-start" style="gap: 1rem;">
             <span style="font-size: 2rem;">📖</span>
@@ -72,7 +30,7 @@ const articles = [
 
     <h2 class="text-xl font-bold text-primary mb-6">Technical Articles</h2>
     <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-      {articles.map((article) => (
+      {publications.articles.map((article) => (
         article.url ? (
           <a href={article.url} target="_blank" rel="noopener noreferrer" class="card" style="text-decoration: none; display: block;">
             <h3 class="font-semibold text-primary mb-1">{article.title}</h3>

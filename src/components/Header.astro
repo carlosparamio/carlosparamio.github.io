@@ -24,5 +24,63 @@ const navItems = [
         </li>
       ))}
     </ul>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="toggle-track">
+        <span class="toggle-icon sun">☀️</span>
+        <span class="toggle-icon moon">🌙</span>
+        <span class="toggle-thumb"></span>
+      </span>
+    </button>
   </nav>
 </header>
+
+<style>
+  .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 1rem;
+  }
+  .toggle-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 52px;
+    height: 28px;
+    background: var(--color-gray-200);
+    border-radius: 14px;
+    position: relative;
+    padding: 0 6px;
+    transition: background 0.2s;
+  }
+  .toggle-icon {
+    font-size: 14px;
+    z-index: 1;
+  }
+  .toggle-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  :global(.dark) .toggle-track {
+    background: var(--color-gray-100);
+  }
+  :global(.dark) .toggle-thumb {
+    transform: translateX(24px);
+    background: var(--color-gray-700);
+  }
+</style>
+
+<script>
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.theme = isDark ? 'dark' : 'light';
+  });
+</script>

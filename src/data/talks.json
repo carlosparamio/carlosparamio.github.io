@@ -1,0 +1,74 @@
+[
+  {
+    "year": 2007,
+    "event": "FLOSS International Conference",
+    "location": "Facultad de CC. Sociales y de la Comunicación",
+    "talk": "Representational State Transfer"
+  },
+  {
+    "year": 2006,
+    "event": "Conferencia Rails Hispana",
+    "location": "Esc. Téc. Superior de Ing. Telecomunicación, Universidad Politécnica de Madrid",
+    "talk": "Comunidad de usuarios de la Feria Real de Algeciras"
+  },
+  {
+    "year": 2006,
+    "event": "III Jornadas de Software Libre de la Universidad de Cádiz",
+    "location": "Facultad de CC. Económicas y Empresariales",
+    "talk": "Ruby on Rails y otros frameworks de licencia libre"
+  },
+  {
+    "year": 2005,
+    "event": "802.party",
+    "location": "Jerez",
+    "talk": "Drupal: Un CMS simple y flexible"
+  },
+  {
+    "year": 2005,
+    "event": "II Jornadas de Software Libre de la Universidad de Cádiz",
+    "location": "Facultad de CC. Económicas y Empresariales",
+    "talk": "Drupal: Un CMS simple y flexible"
+  },
+  {
+    "year": 2004,
+    "event": "IV Jornadas Andaluzas de Software Libre",
+    "location": "Algeciras",
+    "role": "Organizador y miembro del Comité de Revisión de Contribuciones"
+  },
+  {
+    "year": 2004,
+    "event": "Jornadas UGT sobre \"La teleformación y su aplicación a la Formación Profesional\"",
+    "location": "El Puerto de Santa María",
+    "talk": "Teleformación en Europa"
+  },
+  {
+    "year": 2003,
+    "event": "Jornadas de software libre y la empresa",
+    "location": "Confederación de Empresarios de Cádiz",
+    "talk": "El software libre y la empresa"
+  },
+  {
+    "year": 2003,
+    "event": "II Jornadas Tecnológicas CES Formación 2002",
+    "location": "Escuela de Empresariales de Jerez",
+    "talk": "Software libre en Andalucía"
+  },
+  {
+    "year": 2003,
+    "event": "802.party",
+    "location": "Jerez",
+    "talk": "Herramientas básicas de desarrollo"
+  },
+  {
+    "year": 2002,
+    "event": "II Jornadas Andaluzas de Software Libre",
+    "location": "Escuela Técnica Superior de Informática de Málaga",
+    "talk": "Herramientas básicas de desarrollo"
+  },
+  {
+    "year": 2002,
+    "event": "Partysur 2002",
+    "location": "Estepona",
+    "talk": "WineX y juegos en Linux"
+  }
+]

@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import talks from '../data/talks.json';
+
+const talksByYear = talks.reduce((acc, talk) => {
+  if (!acc[talk.year]) acc[talk.year] = [];
+  acc[talk.year].push(talk);
+  return acc;
+}, {} as Record<number, typeof talks>);
+
+const years = Object.keys(talksByYear).sort((a, b) => Number(b) - Number(a));
+---
+
+<BaseLayout title="Talks" description="Conference talks and presentations by Carlos Paramio.">
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <div class="mb-12">
+      <h1 class="section-title">Talks</h1>
+      <p class="text-gray-600 max-w-2xl">
+        Conference talks and presentations at tech events.
+      </p>
+    </div>
+
+    {years.map((year) => (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-primary mb-4">{year}</h2>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          {talksByYear[Number(year)].map((item) => (
+            <div class="card">
+              <h3 class="font-semibold text-primary mb-1">{item.event}</h3>
+              <p class="text-sm text-gray-500 mb-2">{item.location}</p>
+              {item.talk && <p class="text-sm text-gray-600">📢 {item.talk}</p>}
+              {item.role && <p class="text-sm text-gray-600">🎯 {item.role}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+</BaseLayout>

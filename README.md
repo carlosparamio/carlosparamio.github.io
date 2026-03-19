@@ -5,11 +5,16 @@ Personal website built with [Astro](https://astro.build/).
 ## Development
 
 ```bash
-npm install
-npm run dev
+docker compose up
 ```
 
 Site runs at http://localhost:4321
+
+After changing dependencies in `package.json`:
+
+```bash
+docker compose down -v && docker compose up --build -d
+```
 
 ## Build
 

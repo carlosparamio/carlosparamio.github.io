@@ -8,60 +8,326 @@ const services = [
   {
     title: 'Cloud Architecture',
     description: 'Design and implementation of scalable AWS architectures. From infrastructure planning to deployment automation, I help teams build resilient cloud-native systems.',
-    icon: '☁️',
   },
   {
     title: 'Technical Leadership',
     description: 'Strategic guidance for development teams. Architecture reviews, technology selection, and best practices to ensure your project scales with your business.',
-    icon: '🚀',
   },
   {
     title: 'System Optimization',
     description: 'Performance audits, cost optimization, and scalability improvements for existing applications. Identify bottlenecks and implement solutions that matter.',
-    icon: '🔍',
   },
   {
     title: 'Mentoring & Consulting',
     description: 'Knowledge transfer for teams transitioning to cloud or modernizing legacy systems. Hands-on guidance in AWS, software architecture, and agile practices.',
-    icon: '🎓',
   },
 ];
 ---
 
 <BaseLayout title="Home">
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <div class="text-center mb-16">
-      <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-6">
-        <span class="gradient-text">I Design Scalable</span>
-        <br />
-        Cloud Architectures
-      </h1>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Software architect specializing in AWS cloud solutions and scalable systems. 20+ years helping enterprises and startups build robust, high-performance applications.
-      </p>
-    </div>
+  <section class="hero-section shell">
+    <div class="hero-content">
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="hero-network" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="serverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="currentColor" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="currentColor" stop-opacity="0.45"/>
+            </linearGradient>
+            <linearGradient id="packetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="var(--color-accent)"/>
+              <stop offset="100%" stop-color="var(--color-accent)" stop-opacity="0.6"/>
+            </linearGradient>
+          </defs>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
-      {services.map((service) => (
-        <ServiceCard {...service} />
-      ))}
-    </div>
+          <g class="connections" stroke="currentColor" stroke-width="1.2" opacity="0.25">
+            <path d="M45,28 L90,52"/>
+            <path d="M45,28 L25,88"/>
+            <path d="M100,52 L160,30"/>
+            <path d="M100,52 L160,75"/>
+            <path d="M100,52 L90,115"/>
+            <path d="M100,52 L25,88"/>
+            <path d="M100,52 L135,115"/>
+            <path d="M160,30 L160,75"/>
+            <path d="M160,30 L180,115"/>
+            <path d="M90,115 L25,88"/>
+            <path d="M90,115 L135,115"/>
+            <path d="M90,115 L65,145"/>
+            <path d="M135,115 L180,115"/>
+            <path d="M135,115 L65,145"/>
+          </g>
 
-    <div class="text-center mb-8">
-      <h2 class="section-title">What People Say</h2>
-      <p class="text-gray-600">Don't just take my word for it.</p>
-    </div>
+          <g class="nodes">
+            <g transform="translate(35, 18)">
+              <rect x="0" y="0" width="20" height="20" rx="2" fill="url(#serverGrad)"/>
+              <circle cx="5" cy="16" r="1.5" fill="var(--color-accent)" class="led"/>
+              <circle cx="10" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.5s"/>
+            </g>
+            
+            <g transform="translate(90, 42)">
+              <rect x="0" y="0" width="20" height="20" rx="2" fill="url(#serverGrad)"/>
+              <circle cx="5" cy="16" r="1.5" fill="var(--color-accent)" class="led"/>
+              <circle cx="10" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.3s"/>
+              <circle cx="15" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.6s"/>
+            </g>
+            
+            <g transform="translate(150, 20)">
+              <rect x="0" y="0" width="20" height="20" rx="2" fill="url(#serverGrad)"/>
+              <circle cx="5" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.2s"/>
+              <circle cx="10" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.7s"/>
+            </g>
+            
+            <g transform="translate(150, 65)">
+              <rect x="0" y="0" width="20" height="20" rx="2" fill="url(#serverGrad)"/>
+              <circle cx="5" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.4s"/>
+              <circle cx="10" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.8s"/>
+            </g>
+            
+            <g transform="translate(15, 78)">
+              <rect x="0" y="0" width="20" height="20" rx="3" fill="url(#serverGrad)"/>
+              <circle cx="10" cy="10" r="4" fill="none" stroke="var(--color-accent)" stroke-width="1.5" class="hub-ring"/>
+            </g>
+            
+            <g transform="translate(80, 105)">
+              <rect x="0" y="0" width="20" height="20" rx="2" fill="url(#serverGrad)"/>
+              <circle cx="5" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.1s"/>
+              <circle cx="10" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.4s"/>
+              <circle cx="15" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.7s"/>
+            </g>
+            
+            <g transform="translate(125, 105)">
+              <rect x="0" y="0" width="20" height="20" rx="2" fill="url(#serverGrad)"/>
+              <circle cx="5" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.3s"/>
+              <circle cx="10" cy="16" r="1.5" fill="var(--color-accent)" class="led" style="animation-delay: 0.6s"/>
+            </g>
+            
+            <g transform="translate(170, 105)">
+              <circle cx="10" cy="10" r="10" fill="none" stroke="url(#serverGrad)" stroke-width="2" class="hub-ring"/>
+              <circle cx="10" cy="10" r="4" fill="var(--color-accent)" class="hub-center"/>
+            </g>
+            
+            <g transform="translate(55, 135)">
+              <rect x="0" y="0" width="20" height="20" rx="3" fill="url(#serverGrad)"/>
+              <circle cx="10" cy="10" r="4" fill="none" stroke="var(--color-accent)" stroke-width="1.5" class="hub-ring"/>
+            </g>
+          </g>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {testimonials.slice(0, 3).map((testimonial) => (
-        <TestimonialCard {...testimonial} />
-      ))}
-    </div>
-
-    <div class="text-center mt-10">
-      <a href="/about#testimonials" class="text-accent font-medium hover:underline">
-        See all testimonials →
-      </a>
+          <g class="data-packets">
+            <circle class="packet packet-1" r="3" fill="url(#packetGrad)"/>
+            <circle class="packet packet-2" r="2.5" fill="url(#packetGrad)"/>
+            <circle class="packet packet-3" r="2" fill="url(#packetGrad)"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-text">
+        <p class="hero-kicker animate-fade-up">Director of Technology at Avallain</p>
+        <h1 class="text-display font-semibold animate-fade-up" style="animation-delay: 80ms;">
+          Software & Cloud Architect
+        </h1>
+        <p class="hero-subtitle text-lg text-muted max-w-xl animate-fade-up" style="animation-delay: 160ms;">
+          20+ years designing scalable systems for EdTech and SaaS. I bridge architecture, leadership, and delivery to ship products that scale without sacrificing reliability or cost.
+        </p>
+        <div class="hero-actions animate-fade-up" style="animation-delay: 240ms;">
+          <a href="/projects" class="btn btn-primary">View Projects</a>
+          <a href="/about#testimonials" class="btn btn-secondary">Read Testimonials</a>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section class="section shell" aria-labelledby="services-heading">
+    <header class="section-heading animate-fade-up">
+      <span class="section-kicker">Capabilities</span>
+      <h2 id="services-heading">What I Do</h2>
+      <p class="section-description">
+        Architecture leadership, hands-on implementation, and mentorship that help technical teams deliver resilient products with confidence.
+      </p>
+    </header>
+    {services.length > 0 && (
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 animate-stagger">
+        {services.map((service) => (
+          <ServiceCard {...service} />
+        ))}
+      </div>
+    )}
+  </section>
+
+  <section class="section shell section-divider" aria-labelledby="testimonials-heading">
+    <header class="section-heading animate-fade-up">
+      <span class="section-kicker">Testimonials</span>
+      <h2 id="testimonials-heading">Kind Words</h2>
+      <p class="section-description">
+        Leaders, founders, and engineers I have partnered with over the years.
+      </p>
+    </header>
+
+    {testimonials.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-stagger">
+        {testimonials.slice(0, 3).map((testimonial) => (
+          <TestimonialCard {...testimonial} />
+        ))}
+      </div>
+    ) : (
+      <p class="text-muted">What colleagues say about working together.</p>
+    )}
+  </section>
 </BaseLayout>
+
+<style>
+  .hero-section {
+    padding-block: clamp(3.5rem, 9vw + 1rem, 6.5rem);
+  }
+
+  .hero-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-12);
+  }
+
+  .hero-visual {
+    flex-shrink: 0;
+    width: clamp(140px, 20vw, 200px);
+    height: clamp(112px, 16vw, 160px);
+    color: var(--color-primary);
+  }
+
+  .hero-network {
+    width: 100%;
+    height: 100%;
+  }
+
+  .led {
+    animation: led-blink 2s ease-in-out infinite;
+  }
+
+  .hub-ring {
+    animation: hub-pulse 3s ease-in-out infinite;
+  }
+
+  .hub-center {
+    animation: hub-pulse 3s ease-in-out infinite;
+    opacity: 0.7;
+  }
+
+  .packet {
+    opacity: 0;
+  }
+
+  .packet-1 {
+    animation: packet-travel-1 6s ease-in-out infinite;
+  }
+
+  .packet-2 {
+    animation: packet-travel-2 8s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .packet-3 {
+    animation: packet-travel-3 7s ease-in-out infinite;
+    animation-delay: 4s;
+  }
+
+  .hero-text {
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .hero-kicker {
+    font-size: var(--text-sm);
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-text-subtle);
+  }
+
+  .hero-subtitle {
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @keyframes led-blink {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes hub-pulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+
+  @keyframes packet-travel-1 {
+    0% { opacity: 0; transform: translate(45px, 28px); }
+    10% { opacity: 1; }
+    40% { opacity: 1; transform: translate(90px, 52px); }
+    50% { opacity: 0; transform: translate(100px, 52px); }
+    60% { opacity: 0; transform: translate(135px, 115px); }
+    70% { opacity: 1; }
+    95% { opacity: 1; transform: translate(180px, 115px); }
+    100% { opacity: 0; transform: translate(185px, 115px); }
+  }
+
+  @keyframes packet-travel-2 {
+    0% { opacity: 0; transform: translate(25px, 88px); }
+    10% { opacity: 1; }
+    30% { opacity: 1; transform: translate(90px, 115px); }
+    40% { opacity: 0; transform: translate(100px, 115px); }
+    50% { opacity: 0; transform: translate(100px, 52px); }
+    60% { opacity: 1; }
+    85% { opacity: 1; transform: translate(160px, 75px); }
+    95% { opacity: 0; transform: translate(165px, 75px); }
+    100% { opacity: 0; transform: translate(25px, 88px); }
+  }
+
+  @keyframes packet-travel-3 {
+    0% { opacity: 0; transform: translate(55px, 145px); }
+    10% { opacity: 1; }
+    35% { opacity: 1; transform: translate(90px, 52px); }
+    45% { opacity: 0; transform: translate(95px, 52px); }
+    55% { opacity: 0; transform: translate(45px, 28px); }
+    65% { opacity: 1; }
+    90% { opacity: 1; transform: translate(25px, 88px); }
+    100% { opacity: 0; transform: translate(20px, 88px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .led,
+    .hub-ring,
+    .hub-center,
+    .packet {
+      animation: none;
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+      }
+
+    .hero-visual {
+      width: 140px;
+      height: 112px;
+    }
+
+    .hero-text {
+      justify-items: center;
+    }
+
+    .hero-text .text-lg {
+      max-width: 100%;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+  }
+</style>

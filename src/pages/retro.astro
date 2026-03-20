@@ -21,43 +21,46 @@ const games = [
 ---
 
 <BaseLayout title="Retro" description="A collection of ZX Spectrum adventure games from my childhood.">
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <div class="text-center mb-16">
-      <h1 class="section-title">Retro Games</h1>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        A collection of ZX Spectrum adventure games from my childhood. These games were created using PAWS (Professional Adventure Writing System). Play them directly in your browser!
+  <section class="section shell" aria-labelledby="retro-heading">
+    <header class="section-heading">
+      <span class="section-kicker">ZX Spectrum</span>
+      <h1 id="retro-heading">Retro Games</h1>
+      <p class="section-description">
+        Adventure games from my childhood, built with PAWS (Professional Adventure Writing System). Play them directly in your browser.
       </p>
-    </div>
+    </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {games.map((game) => (
         <div class="card retro-card">
-          <div class="retro-card-icon">🕹️</div>
           <h3 class="retro-card-title">{game.title}</h3>
-          <button class="btn-wos" onclick={`window.open('${game.wosUrl}', '_blank')`}>
-            View on WoS
-          </button>
-          <button class="btn-retro" data-game={game.file}>
-            ▶ Play Now
-          </button>
+          <div class="retro-actions">
+            <a class="btn btn-secondary retro-link" href={game.wosUrl} target="_blank" rel="noopener">
+              View on WoS
+            </a>
+            <button class="btn btn-primary retro-play" type="button" data-game={game.file}>
+              Play Now
+            </button>
+          </div>
         </div>
       ))}
     </div>
 
-    <div class="bg-gray-50 rounded-xl p-8">
-      <h2 class="retro-section-title">Comandos</h2>
-      <p class="retro-text">
-        Escribe órdenes en español usando <strong>VERBO + NOMBRE</strong> (ej: COGER LLAVE, ABRIR PUERTA, EXAMINAR MESA).<br>
-        Movimiento: <strong>N</strong> (norte), <strong>S</strong> (sur), <strong>E</strong> (este), <strong>O</strong> (oeste), <strong>SUBIR</strong>, <strong>BAJAR</strong>.<br>
-        Atajos: <strong>M</strong> o <strong>MIRAR</strong> (describir lugar), <strong>I</strong> o <strong>INVENTARIO</strong> (ver objetos), <strong>EX</strong> o <strong>EXAMINAR</strong>.<br>
-        Otros: <strong>COGER</strong>, <strong>DEJAR</strong>, <strong>ABRIR</strong>, <strong>METER</strong>, <strong>SACAR</strong>, <strong>HABLAR CON</strong>, <strong>DAR objeto A personaje</strong>.
-      </p>
-    </div>
-
-    <div id="emulator-container" class="mt-12" style="display: none;">
+    <div id="emulator-container" class="retro-emulator" style="display: none;">
+      <div class="mb-8">
+        <h2 class="text-lg font-semibold text-heading mb-4">How to Play</h2>
+        <div class="retro-help">
+          <ul class="retro-list">
+            <li>Escribe órdenes en español usando <strong>VERBO + NOMBRE</strong> (ej: COGER LLAVE, ABRIR PUERTA, EXAMINAR MESA).</li>
+            <li>Movimiento: <strong>N</strong> (norte), <strong>S</strong> (sur), <strong>E</strong> (este), <strong>O</strong> (oeste), <strong>SUBIR</strong>, <strong>BAJAR</strong>.</li>
+            <li>Atajos: <strong>M</strong> o <strong>MIRAR</strong> (describir lugar), <strong>I</strong> o <strong>INVENTARIO</strong> (ver objetos), <strong>EX</strong> o <strong>EXAMINAR</strong>.</li>
+            <li>Otros: <strong>COGER</strong>, <strong>DEJAR</strong>, <strong>ABRIR</strong>, <strong>METER</strong>, <strong>SACAR</strong>, <strong>HABLAR CON</strong>, <strong>DAR objeto A personaje</strong>.</li>
+          </ul>
+        </div>
+      </div>
       <div id="jsspeccy" class="retro-emulator-wrapper"></div>
       <div class="retro-emulator-footer">
-        <button id="close-emulator" class="btn-close-emulator">✕ Close Emulator</button>
+        <button id="close-emulator" class="btn btn-secondary btn-close-emulator" type="button">Close</button>
       </div>
     </div>
   </section>
@@ -65,8 +68,8 @@ const games = [
 
 <script is:inline src="/jsspeccy/jsspeccy.js"></script>
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', function() {
-    var playButtons = document.querySelectorAll('.btn-retro');
+  function initRetroEmulator() {
+    var playButtons = document.querySelectorAll('.retro-play');
     var container = document.getElementById('emulator-container');
     var closeButton = document.getElementById('close-emulator');
     var emu = null;
@@ -112,86 +115,75 @@ const games = [
         }
       });
     }
-  });
+  }
+
+  document.addEventListener('DOMContentLoaded', initRetroEmulator);
+  document.addEventListener('astro:page-load', initRetroEmulator);
 </script>
 
 <style>
   .retro-card {
+    display: grid;
+    gap: var(--space-4);
+    text-align: left;
+  }
+
+  .retro-card-title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .retro-actions {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .retro-link,
+  .retro-play {
+    width: 100%;
+  }
+
+  .retro-emulator {
+    margin-top: clamp(2.5rem, 5vw + 1rem, var(--space-12));
+    padding-bottom: clamp(2rem, 4vw + 1rem, var(--space-12));
+  }
+
+  .retro-help {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .retro-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: var(--space-3);
   }
-  .retro-card-icon { font-size: 3rem; margin-bottom: 1rem; }
-  .retro-card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-  }
-  .btn-wos {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    background-color: transparent;
-    color: var(--color-primary);
-    font-weight: 500;
-    font-size: 0.875rem;
-    border: 2px solid var(--color-primary);
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    width: 100%;
-    margin-bottom: 0.75rem;
-  }
-  .btn-wos:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-  }
-  .btn-retro {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-weight: 500;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s;
-    width: 100%;
-  }
-  .btn-retro:hover {
-    background-color: var(--color-secondary);
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  }
-  .retro-section-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-  }
-  .retro-subtitle {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-  }
-  .retro-list { list-style: none; padding: 0; margin: 0; }
+
   .retro-list li {
-    font-size: 0.875rem;
-    color: var(--color-gray-600);
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
-  }
-  .retro-list strong { color: var(--color-gray-700); }
-  .retro-text {
-    font-size: 0.875rem;
-    color: var(--color-gray-600);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
     line-height: 1.6;
+    padding-left: var(--space-4);
+    position: relative;
   }
+
+  .retro-list li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .retro-list strong {
+    color: var(--color-text);
+  }
+
   .retro-emulator-wrapper {
     background-color: #000;
     border-radius: 0.75rem;
@@ -200,6 +192,7 @@ const games = [
     aspect-ratio: 4 / 3;
     position: relative;
   }
+
   .retro-emulator-wrapper :global(> div) {
     position: absolute !important;
     top: 0;
@@ -207,44 +200,39 @@ const games = [
     width: 100% !important;
     height: 100% !important;
   }
+
   .retro-emulator-wrapper :global(canvas) {
     width: 100% !important;
     height: 100% !important;
     object-fit: contain;
   }
+
   .retro-emulator-wrapper :global(button) {
     z-index: 10;
   }
+
   .retro-emulator-wrapper :global(menu),
   .retro-emulator-wrapper :global(ul),
   .retro-emulator-wrapper :global(div > div:first-child) {
     display: none !important;
   }
+
   .retro-emulator-wrapper :global(canvas) {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
   }
+
   .retro-emulator-footer {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: var(--space-4);
   }
-  .btn-close-emulator {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-weight: 500;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
-    font-size: 0.875rem;
-    transition: all 0.2s;
-  }
-  .btn-close-emulator:hover {
-    background-color: var(--color-secondary);
+
+  @media (prefers-reduced-motion: reduce) {
+    .retro-actions .btn,
+    .retro-emulator-footer .btn {
+      transition: none;
+    }
   }
 </style>

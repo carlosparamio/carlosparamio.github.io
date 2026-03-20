@@ -6,90 +6,117 @@ import certifications from '../data/certifications.json';
 ---
 
 <BaseLayout title="About" description="Learn more about Carlos Paramio, software and cloud architect with 20+ years of experience.">
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-20">
-      <div class="lg:col-span-2">
-        <h1 class="section-title">About Me</h1>
-        <div class="prose prose-lg text-gray-600">
-          <p class="mb-6">
-            I'm a software and cloud architect with over 20 years of experience designing scalable systems. Currently at Avallain, I lead the architecture of AI-powered educational platforms serving millions of learners worldwide.
-          </p>
-          <p class="mb-6">
-            My focus has evolved from hands-on development to strategic technical leadership: designing AWS cloud infrastructures, defining system architectures, and guiding teams through complex technical challenges.
-          </p>
-          <p>
-            I've collaborated with startups and enterprises across Europe and the US, spoken at conferences about development practices, and contributed to open source projects. I'm passionate about building systems that are not just functional, but maintainable, scalable, and cost-effective.
-          </p>
-        </div>
-
-        <div class="flex gap-4 mt-8">
-          <a href="https://github.com/carlosparamio" class="btn-secondary" target="_blank" rel="noopener me">
-            GitHub
-          </a>
-          <a href="https://linkedin.com/in/carlosparamio" class="btn-primary" target="_blank" rel="noopener me">
-            Contact me on LinkedIn
-          </a>
-        </div>
-      </div>
-
-      <div class="lg:col-span-1" style="padding-left: 2rem;">
-        <div class="card">
-          <h3 class="font-bold text-primary mb-4">Quick Facts</h3>
-          <ul class="space-y-3 text-sm">
-            <li class="flex items-start" style="gap: 0.5rem;">
-              <span class="text-accent">✓</span>
-              <span>20+ years in software development</span>
-            </li>
-            <li class="flex items-start" style="gap: 0.5rem;">
-              <span class="text-accent">✓</span>
-              <span>AWS Cloud Architecture</span>
-            </li>
-            <li class="flex items-start" style="gap: 0.5rem;">
-              <span class="text-accent">✓</span>
-              <span>Scalable system design</span>
-            </li>
-            <li class="flex items-start" style="gap: 0.5rem;">
-              <span class="text-accent">✓</span>
-              <span>Technical leadership</span>
-            </li>
-            <li class="flex items-start" style="gap: 0.5rem;">
-              <span class="text-accent">✓</span>
-              <span>EdTech & SaaS platforms</span>
-            </li>
-            <li class="flex items-start" style="gap: 0.5rem;">
-              <span class="text-accent">✓</span>
-              <span>Remote-first since 2008</span>
-            </li>
-            <li class="flex items-start" style="gap: 0.5rem;">
-              <span class="text-accent">✓</span>
-              <span>English & Spanish</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="mb-20">
-      <h2 class="section-title mb-8">Certifications</h2>
-      <div class="flex gap-6">
-        {certifications.map((cert) => (
-          <a href={cert.url} target="_blank" rel="noopener">
-            <img src={cert.image} alt={cert.name} width="150" height="150" />
-          </a>
-        ))}
-      </div>
-    </div>
-
-    <div id="testimonials">
-      <h2 class="section-title mb-8">Testimonials</h2>
-      <p class="text-gray-600 mb-10">
-        Here's what some of my clients and colleagues have to say about working with me.
+  <section class="section shell about-intro">
+    <header class="section-heading">
+      <span class="section-kicker">Profile</span>
+      <h1>Background</h1>
+    </header>
+    <div class="prose text-muted about-prose">
+      <p>
+        I'm a software and cloud architect with over 20 years of experience designing scalable systems. Currently at Avallain, I lead the architecture of AI-powered educational products serving millions of learners worldwide.
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {testimonials.map((testimonial) => (
-          <TestimonialCard {...testimonial} />
-        ))}
-      </div>
+      <p>
+        My focus has evolved from hands-on development to strategic technical leadership: designing AWS cloud infrastructures, defining system architectures, and guiding teams through complex technical challenges.
+      </p>
+      <p>
+        I've collaborated with startups and enterprises across Europe and the US, spoken at conferences about development practices, and contributed to open source projects. I'm passionate about building systems that are not just functional, but maintainable, scalable, and cost-effective.
+      </p>
+      <p>
+        20+ years in software development, AWS cloud architecture, EdTech & SaaS products. Remote-first since 2008. English & Spanish.
+      </p>
+    </div>
+    <div class="about-actions">
+      <a href="https://linkedin.com/in/carlosparamio" class="btn btn-primary" target="_blank" rel="noopener me">
+        Let's Connect
+      </a>
+      <a href="/projects" class="btn btn-secondary">Explore Projects</a>
+    </div>
+  </section>
+
+  <section class="section shell section-divider" aria-labelledby="certifications-heading">
+    <header class="section-heading">
+      <span class="section-kicker">Credentials</span>
+      <h2 id="certifications-heading">Certifications</h2>
+      <p class="section-description">Continuous learning keeps my architecture decisions grounded in current cloud capabilities.</p>
+    </header>
+    <ul class="cert-grid">
+      {certifications.map((cert) => (
+        <li class="cert-item">
+          <a href={cert.url} target="_blank" rel="noopener" class="card card-link cert-card">
+            <img src={cert.image} alt={`Badge: ${cert.name}`} width="120" height="120" loading="lazy" />
+            <span class="cert-name">{cert.name}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section id="testimonials" class="section shell section-divider" aria-labelledby="about-testimonials">
+    <header class="section-heading">
+      <span class="section-kicker">Testimonials</span>
+      <h2 id="about-testimonials">What Colleagues Say</h2>
+      <p class="section-description">Honest feedback from people I've partnered with over the years.</p>
+    </header>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {testimonials.map((testimonial) => (
+        <TestimonialCard {...testimonial} />
+      ))}
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .about-intro {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, var(--space-10));
+    max-width: 48rem;
+  }
+
+  .about-prose {
+    color: var(--color-text-muted);
+  }
+
+  .about-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(1.5rem, 4vw, var(--space-8));
+    margin: 0;
+    padding: 0;
+  }
+
+  .cert-item {
+    list-style: none;
+  }
+
+  .cert-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: var(--space-3);
+  }
+
+  .cert-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+  }
+
+  .cert-name {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .about-intro {
+      max-width: 100%;
+    }
+
+  }
+</style>

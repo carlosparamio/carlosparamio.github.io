@@ -4,49 +4,112 @@ import publications from '../data/publications.json';
 ---
 
 <BaseLayout title="Publications" description="Books and articles by Carlos Paramio.">
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <div class="mb-12">
-      <h1 class="section-title">Publications</h1>
-      <p class="text-gray-600 max-w-2xl">
+  <section class="section shell" aria-labelledby="publications-heading">
+    <header class="section-heading">
+      <span class="section-kicker">Writing</span>
+      <h1 id="publications-heading">Publications</h1>
+      <p class="section-description">
         Books and technical articles I've written over the years.
       </p>
-    </div>
+    </header>
 
-    <h2 class="text-xl font-bold text-primary mb-6 mt-8">Books</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-      {publications.books.map((book) => (
-        <a href={book.url} target="_blank" rel="noopener noreferrer" class="card" style="text-decoration: none;">
-          <div class="flex items-start" style="gap: 1rem;">
-            <span style="font-size: 2rem;">📖</span>
-            <div>
-              <h3 class="font-semibold text-primary mb-1">{book.title}</h3>
-              <p class="text-xs text-gray-400 mb-2">{book.type} · {book.year}{book.isbn && ` · ISBN: ${book.isbn}`}</p>
-              <p class="text-sm text-gray-600">{book.description}</p>
-            </div>
-          </div>
-        </a>
-      ))}
-    </div>
-
-    <h2 class="text-xl font-bold text-primary mb-6">Technical Articles</h2>
-    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-      {publications.articles.map((article) => (
-        article.url ? (
-          <a href={article.url} target="_blank" rel="noopener noreferrer" class="card" style="text-decoration: none; display: block;">
-            <h3 class="font-semibold text-primary mb-1">{article.title}</h3>
-            <p class="text-sm text-gray-600">
-              {article.publication}{article.year && ` (${article.year})`}{article.isbn && ` · ISBN: ${article.isbn}`}
-            </p>
+    <div class="publication-group">
+      <div class="publication-group-header">
+        <h2 class="publication-group-title">Books</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {publications.books.map((book) => (
+          <a href={book.url} target="_blank" rel="noopener noreferrer" class="card card-link publication-card">
+            <span class="publication-kicker">{book.type}</span>
+            <h3 class="publication-title">{book.title}</h3>
+            <p class="publication-meta">{book.year}{book.isbn && ` · ISBN: ${book.isbn}`}</p>
+            <p class="publication-description">{book.description}</p>
           </a>
-        ) : (
-          <div class="card">
-            <h3 class="font-semibold text-primary mb-1">{article.title}</h3>
-            <p class="text-sm text-gray-600">
-              {article.publication}{article.year && ` (${article.year})`}{article.isbn && ` · ISBN: ${article.isbn}`}
-            </p>
-          </div>
-        )
-      ))}
+        ))}
+      </div>
+    </div>
+
+    <div class="publication-group section-divider">
+      <div class="publication-group-header">
+        <h2 class="publication-group-title">Technical Articles</h2>
+      </div>
+      <div class="publication-list">
+        {publications.articles.map((article) => (
+          article.url ? (
+            <a href={article.url} target="_blank" rel="noopener noreferrer" class="card card-link publication-card">
+              <h3 class="publication-title">{article.title}</h3>
+              <p class="publication-meta">
+                {article.publication}{article.year && ` (${article.year})`}{article.isbn && ` · ISBN: ${article.isbn}`}
+              </p>
+            </a>
+          ) : (
+            <div class="card publication-card" role="article">
+              <h3 class="publication-title">{article.title}</h3>
+              <p class="publication-meta">
+                {article.publication}{article.year && ` (${article.year})`}{article.isbn && ` · ISBN: ${article.isbn}`}
+              </p>
+            </div>
+          )
+        ))}
+      </div>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .publication-group {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, var(--space-8));
+    margin-top: clamp(1.5rem, 3vw + 1rem, var(--space-10));
+  }
+
+  .publication-group:first-of-type {
+    margin-top: 0;
+  }
+
+  .publication-group.section-divider {
+    margin-top: 0;
+  }
+
+  .publication-group-header {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .publication-group-title {
+    font-size: var(--text-2xl);
+    color: var(--color-primary);
+  }
+
+  .publication-list {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .publication-card {
+    gap: var(--space-2);
+  }
+
+  .publication-kicker {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text-subtle);
+  }
+
+  .publication-title {
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+  }
+
+  .publication-meta {
+    font-size: var(--text-sm);
+    color: var(--color-text-subtle);
+  }
+
+  .publication-description {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+</style>

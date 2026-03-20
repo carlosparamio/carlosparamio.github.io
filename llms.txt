@@ -1,0 +1,49 @@
+# Carlos Paramio - Software & Cloud Architect
+
+Personal portfolio website showcasing 20+ years of experience in software architecture, cloud infrastructure, and technical leadership.
+
+**Website**: https://carlosparamio.com  
+**Location**: Remote (since 2008)  
+**Languages**: English, Spanish
+
+## Professional Background
+
+- **Current Role**: Director of Technology at Avallain
+- **Focus**: AI-powered educational platforms serving millions of learners
+- **Specialties**: AWS cloud architecture, system design, technical leadership
+- **Industries**: EdTech, SaaS, Web Development
+
+## Certifications
+
+- AWS Certified Cloud Practitioner
+- AWS Certified AI Practitioner
+
+## Pages
+
+- **Home**: Hero with services and testimonials
+- **About/Background**: Bio, certifications, full testimonials
+- **Projects**: Avallain products and past projects
+- **Open Source**: Ruby gems and community contributions
+- **Publications**: Books and technical articles
+- **Talks**: Conference presentations by year
+- **Retro**: ZX Spectrum games (PAWS format) - playable in browser
+
+## Technical Stack
+
+- Astro 5.x (static site generator)
+- Vanilla CSS with custom properties
+- No JavaScript frameworks
+- View Transitions API for page navigation
+
+## Design Philosophy
+
+Earth tones palette reflecting eco-conscious approach to technology:
+- Scalable, efficient systems = lower energy consumption
+- Professional but approachable aesthetic
+- Quality content over decorative elements
+
+## Contact
+
+- GitHub: https://github.com/carlosparamio
+- LinkedIn: https://linkedin.com/in/carlosparamio
+- Twitter: https://twitter.com/carlosparamio

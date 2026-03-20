@@ -9,7 +9,7 @@ interface Props {
 const { name, summary, image, url } = Astro.props;
 ---
 
-<a href={url} target="_blank" rel="noopener noreferrer" class="card project-card">
+<a href={url} target="_blank" rel="noopener noreferrer" class="card card-link project-card">
   <div class="project-image-container">
     <img 
       src={`/images/projects/${image}/square.png`}
@@ -20,6 +20,9 @@ const { name, summary, image, url } = Astro.props;
       height="48"
     />
   </div>
-  <h3 class="project-title">{name}</h3>
+  <div class="project-heading">
+    <span class="project-kicker">Client Project</span>
+    <h3 class="project-title">{name}</h3>
+  </div>
   <p class="project-summary">{summary}</p>
 </a>

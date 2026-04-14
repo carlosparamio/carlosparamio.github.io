@@ -1,5 +1,10 @@
 [
   {
+    "name": "zesarux-mcp-server",
+    "description": "MCP server to control the ZEsarUX emulator via ZRCP, enabling AI agents to interact with ZX Spectrum and other retro computers.",
+    "url": "https://github.com/carlosparamio/zesarux-mcp-server"
+  },
+  {
     "name": "rack-facebook",
     "description": "Rack middleware that validates Facebook signatures and converts params to Ruby objects.",
     "url": "https://github.com/carlosparamio/rack-facebook",

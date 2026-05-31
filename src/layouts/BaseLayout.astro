@@ -27,8 +27,8 @@ const { title, description = 'Web application development and architecture exper
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Sora:wght@500;600;700&display=swap"></noscript>
     <ViewTransitions />
     <title>{title} | Carlos Paramio</title>
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -48,10 +48,10 @@ const { title, description = 'Web application development and architecture exper
     })} />
     <script is:inline>
       function initTheme() {
-        if (localStorage.theme === 'dark' || (!localStorage.theme && matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
-        } else {
+        if (localStorage.theme === 'light') {
           document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
         }
       }
       initTheme();
@@ -59,37 +59,39 @@ const { title, description = 'Web application development and architecture exper
     </script>
     <style is:global>
       :root {
-        /* Brand colors - Earth tones for eco-conscious tech */
-        --color-primary: oklch(35% 0.06 130);
-        --color-secondary: oklch(28% 0.05 130);
-        --color-accent: oklch(57% 0.15 55);
+        /* Redesign branch: agentic infrastructure lab */
+        --color-primary: oklch(28% 0.07 155);
+        --color-secondary: oklch(23% 0.06 155);
+        --color-accent: oklch(56% 0.19 145);
+        --color-signal: oklch(70% 0.15 190);
+        --color-warm-signal: oklch(66% 0.16 70);
 
         /* Semantic surface colors */
-        --color-surface: oklch(99% 0 0);
-        --color-surface-raised: oklch(99.5% 0.003 130);
-        --color-background: oklch(99% 0 0);
+        --color-surface: oklch(98% 0.006 155);
+        --color-surface-raised: oklch(96% 0.012 155);
+        --color-background: oklch(99% 0.004 155);
 
         /* Semantic text colors */
-        --color-text: oklch(38% 0.04 130);
-        --color-text-muted: oklch(52% 0.035 130);
-        --color-text-subtle: oklch(54% 0.025 130);
-        --color-text-inverse: oklch(99% 0 0);
+        --color-text: oklch(28% 0.04 155);
+        --color-text-muted: oklch(43% 0.035 155);
+        --color-text-subtle: oklch(49% 0.04 155);
+        --color-text-inverse: oklch(98% 0.006 155);
 
         /* Neutral scale - green-tinted for cohesion */
-        --color-gray-50: oklch(98% 0.005 130);
-        --color-gray-100: oklch(95% 0.008 130);
-        --color-gray-200: oklch(88% 0.012 130);
+        --color-gray-50: oklch(96% 0.01 155);
+        --color-gray-100: oklch(92% 0.014 155);
+        --color-gray-200: oklch(84% 0.018 155);
 
         /* Border */
-        --color-border: oklch(85% 0.01 130);
-        --color-border-subtle: oklch(93% 0.005 130);
+        --color-border: oklch(78% 0.025 155);
+        --color-border-subtle: oklch(88% 0.015 155);
 
         /* Accent backgrounds */
-        --color-accent-bg: oklch(96% 0.02 130);
+        --color-accent-bg: oklch(93% 0.04 150);
 
         /* Button hover (light mode) */
-        --color-btn-hover-bg: oklch(28% 0.06 130);
-        --color-btn-hover-text: oklch(99% 0 0);
+        --color-btn-hover-bg: oklch(28% 0.09 155);
+        --color-btn-hover-text: oklch(98% 0.006 155);
 
         /* Spacing scale */
         --space-1: 0.25rem;
@@ -131,30 +133,32 @@ const { title, description = 'Web application development and architecture exper
       }
 
       :root.dark {
-        --color-primary: oklch(88% 0.05 130);
-        --color-secondary: oklch(78% 0.04 130);
-        --color-accent: oklch(65% 0.14 50);
+        --color-primary: oklch(86% 0.12 150);
+        --color-secondary: oklch(75% 0.10 155);
+        --color-accent: oklch(82% 0.20 145);
+        --color-signal: oklch(78% 0.16 195);
+        --color-warm-signal: oklch(75% 0.16 70);
 
-        --color-surface: oklch(18% 0.015 130);
-        --color-surface-raised: oklch(22% 0.015 130);
-        --color-background: oklch(12% 0.015 130);
+        --color-surface: oklch(15% 0.025 155);
+        --color-surface-raised: oklch(19% 0.032 155);
+        --color-background: oklch(10% 0.025 155);
 
-        --color-text: oklch(88% 0.025 130);
-        --color-text-muted: oklch(70% 0.025 130);
-        --color-text-subtle: oklch(60% 0.02 130);
-        --color-text-inverse: oklch(12% 0.015 130);
+        --color-text: oklch(89% 0.035 155);
+        --color-text-muted: oklch(72% 0.04 155);
+        --color-text-subtle: oklch(64% 0.055 155);
+        --color-text-inverse: oklch(10% 0.025 155);
 
-        --color-gray-50: oklch(18% 0.015 130);
-        --color-gray-100: oklch(22% 0.015 130);
-        --color-gray-200: oklch(32% 0.015 130);
+        --color-gray-50: oklch(15% 0.025 155);
+        --color-gray-100: oklch(20% 0.028 155);
+        --color-gray-200: oklch(30% 0.032 155);
 
-        --color-border: oklch(28% 0.015 130);
-        --color-border-subtle: oklch(20% 0.012 130);
+        --color-border: oklch(34% 0.055 155);
+        --color-border-subtle: oklch(24% 0.035 155);
 
-        --color-accent-bg: oklch(25% 0.04 130);
+        --color-accent-bg: oklch(22% 0.07 150);
 
-        --color-btn-hover-bg: oklch(86% 0.05 130);
-        --color-btn-hover-text: oklch(12% 0.015 130);
+        --color-btn-hover-bg: oklch(86% 0.16 145);
+        --color-btn-hover-text: oklch(10% 0.025 155);
       }
 
       * {
@@ -165,7 +169,7 @@ const { title, description = 'Web application development and architecture exper
 
       html {
         scroll-behavior: smooth;
-        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        font-family: 'Manrope', system-ui, -apple-system, sans-serif;
         font-size: 16px;
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
@@ -175,7 +179,10 @@ const { title, description = 'Web application development and architecture exper
       }
 
       body {
-        background-color: var(--color-background);
+        background:
+          radial-gradient(circle at 18% 8%, color-mix(in oklch, var(--color-accent) 18%, transparent) 0 18rem, transparent 34rem),
+          radial-gradient(circle at 86% 12%, color-mix(in oklch, var(--color-signal) 16%, transparent) 0 16rem, transparent 32rem),
+          var(--color-background);
         color: var(--color-text);
         min-height: 100vh;
         display: flex;
@@ -261,9 +268,11 @@ const { title, description = 'Web application development and architecture exper
       /* Typography - Clear hierarchy */
       h1, h2, h3, h4, h5, h6 {
         color: var(--color-primary);
-        font-weight: 600;
-        line-height: 1.15;
-        letter-spacing: -0.02em;
+        font-family: 'Sora', 'Manrope', system-ui, sans-serif;
+        font-weight: 700;
+        line-height: 1.08;
+        letter-spacing: -0.035em;
+        text-wrap: balance;
       }
 
       h1 { 
@@ -404,10 +413,10 @@ const { title, description = 'Web application development and architecture exper
 
       .section-kicker {
         font-size: var(--text-xs);
-        letter-spacing: 0.22em;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
         font-weight: 600;
-        color: var(--color-text-subtle);
+        color: var(--color-accent);
       }
 
       .section-description {

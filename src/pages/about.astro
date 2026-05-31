@@ -84,8 +84,8 @@ import certifications from '../data/certifications.json';
 
   .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: clamp(1.5rem, 4vw, var(--space-8));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: clamp(1rem, 3vw, var(--space-6));
     margin: 0;
     padding: 0;
   }
@@ -95,22 +95,27 @@ import certifications from '../data/certifications.json';
   }
 
   .cert-card {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
     align-items: center;
     text-align: left;
-    gap: var(--space-3);
+    gap: var(--space-6);
+    min-height: 11rem;
   }
 
   .cert-card img {
-    width: 120px;
-    height: 120px;
+    width: 96px;
+    height: 96px;
     object-fit: contain;
+    justify-self: center;
   }
 
   .cert-name {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
+    max-width: 18rem;
+    font-size: var(--text-base);
+    color: var(--color-text);
     font-weight: 600;
+    line-height: 1.35;
   }
 
   @media (max-width: 640px) {
@@ -118,5 +123,19 @@ import certifications from '../data/certifications.json';
       max-width: 100%;
     }
 
+    .cert-card {
+      grid-template-columns: 80px minmax(0, 1fr);
+      gap: var(--space-4);
+      min-height: 9rem;
+    }
+
+    .cert-card img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .cert-name {
+      font-size: var(--text-sm);
+    }
   }
 </style>

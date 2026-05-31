@@ -16,7 +16,7 @@ A+B from the shape exercise:
 1. **Dark-first control plane**: the default impression should feel like an operational system map, not a generic marketing page.
 2. **Neon with restraint**: phosphor green and cyan are signals, not decoration. Avoid purple-blue SaaS gradients.
 3. **Architecture before spectacle**: diagrams, labels, and motion should explain systems thinking.
-4. **Senior copy, no AI hype**: use concrete phrases like LLM harnesses, evaluation gates, tool boundaries, observability, and cloud scale.
+4. **Senior copy, no AI hype**: lead with software architecture, cloud scale, delivery discipline, observability, and engineering judgment. Mention agentic workflows as a current layer, not the whole identity.
 5. **Keep credibility anchors**: preserve current navigation, testimonials, projects, and professional background.
 
 ## Typography

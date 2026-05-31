@@ -44,14 +44,28 @@ const years = Object.keys(talksByYear).sort((a, b) => Number(b) - Number(a));
 
 <style>
   .timeline {
+    --timeline-year-col: 120px;
+    --timeline-year-gap: clamp(1.5rem, 4vw, var(--space-8));
+    --timeline-line-x: calc(var(--timeline-year-col) + var(--timeline-year-gap) + 6px);
+    position: relative;
     display: grid;
     gap: clamp(2rem, 5vw, var(--space-12));
   }
 
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: var(--timeline-line-x);
+    top: var(--space-3);
+    bottom: 0;
+    width: 2px;
+    background: var(--color-border-subtle);
+  }
+
   .timeline-year {
     display: grid;
-    grid-template-columns: minmax(70px, 120px) 1fr;
-    gap: clamp(1.5rem, 4vw, var(--space-8));
+    grid-template-columns: var(--timeline-year-col) 1fr;
+    gap: var(--timeline-year-gap);
     align-items: start;
   }
 
@@ -68,32 +82,25 @@ const years = Object.keys(talksByYear).sort((a, b) => Number(b) - Number(a));
     position: relative;
     display: grid;
     gap: var(--space-4);
-    padding-left: var(--space-6);
-  }
-
-  .timeline-items::before {
-    content: '';
-    position: absolute;
-    left: 0.5rem;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--color-border-subtle);
   }
 
   .timeline-item {
+    position: relative;
     display: grid;
-    grid-template-columns: 24px 1fr;
+    grid-template-columns: 14px 1fr;
     gap: var(--space-4);
     align-items: start;
   }
 
   .timeline-dot {
+    position: relative;
+    z-index: 1;
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    border: 3px solid color-mix(in oklch, var(--color-accent) 60%, transparent 40%);
-    background: var(--color-background);
+    border: 3px solid var(--color-accent);
+    background: var(--color-accent);
+    box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px color-mix(in oklch, var(--color-accent) 22%, transparent);
     margin-top: var(--space-3);
   }
 
@@ -117,6 +124,15 @@ const years = Object.keys(talksByYear).sort((a, b) => Number(b) - Number(a));
   }
 
   @media (max-width: 720px) {
+    .timeline {
+      --timeline-line-x: 6px;
+      gap: var(--space-8);
+    }
+
+    .timeline::before {
+      top: 3.25rem;
+    }
+
     .timeline-year {
       grid-template-columns: 1fr;
     }
@@ -126,7 +142,7 @@ const years = Object.keys(talksByYear).sort((a, b) => Number(b) - Number(a));
     }
 
     .timeline-items {
-      padding-left: var(--space-5);
+      padding-left: 0;
     }
   }
 </style>

@@ -9,20 +9,20 @@ import certifications from '../data/certifications.json';
   <section class="section shell about-intro">
     <header class="section-heading">
       <span class="section-kicker">Profile</span>
-      <h1>Background</h1>
+      <h1>Architecture, delivery, and systems judgment</h1>
     </header>
     <div class="prose text-muted about-prose">
       <p>
-        I'm a software and cloud architect with over 20 years of experience designing scalable systems. Currently at Avallain, I lead the architecture of AI-powered educational products serving millions of learners worldwide.
+        I'm a software and cloud architect with over 20 years of experience designing scalable systems. Currently at Avallain, I lead the architecture of educational platforms and AI-powered products serving millions of learners worldwide.
       </p>
       <p>
-        My focus has evolved from hands-on development to strategic technical leadership: designing AWS cloud infrastructures, defining system architectures, and guiding teams through complex technical challenges.
+        My focus has evolved from hands-on development to strategic technical leadership: designing AWS cloud infrastructure, defining system boundaries, and helping teams make durable technical decisions under real delivery constraints.
       </p>
       <p>
-        I've collaborated with startups and enterprises across Europe and the US, spoken at conferences about development practices, and contributed to open source projects. I'm passionate about building systems that are not just functional, but maintainable, scalable, and cost-effective.
+        I've collaborated with startups and enterprises across Europe and the US, spoken at conferences about development practices, and contributed to open source projects. Recently, I have been exploring how coding agents and LLM workflows can support engineering teams when they are guided by architecture, review, and operational discipline.
       </p>
       <p>
-        20+ years in software development, AWS cloud architecture, EdTech & SaaS products. Remote-first since 2008. English & Spanish.
+        20+ years in software development, AWS cloud architecture, EdTech & SaaS products. Current interests: AI-assisted delivery, agentic workflows, and scalable software practice. Remote-first since 2008. English & Spanish.
       </p>
     </div>
     <div class="about-actions">
@@ -36,8 +36,8 @@ import certifications from '../data/certifications.json';
   <section class="section shell section-divider" aria-labelledby="certifications-heading">
     <header class="section-heading">
       <span class="section-kicker">Credentials</span>
-      <h2 id="certifications-heading">Certifications</h2>
-      <p class="section-description">Continuous learning keeps my architecture decisions grounded in current cloud capabilities.</p>
+      <h2 id="certifications-heading">Cloud credentials, practical context</h2>
+      <p class="section-description">Continuous learning keeps architecture decisions grounded in current cloud capabilities, not abstract diagrams.</p>
     </header>
     <ul class="cert-grid">
       {certifications.map((cert) => (
@@ -53,9 +53,9 @@ import certifications from '../data/certifications.json';
 
   <section id="testimonials" class="section shell section-divider" aria-labelledby="about-testimonials">
     <header class="section-heading">
-      <span class="section-kicker">Testimonials</span>
-      <h2 id="about-testimonials">What Colleagues Say</h2>
-      <p class="section-description">Honest feedback from people I've partnered with over the years.</p>
+      <span class="section-kicker">Signals</span>
+      <h2 id="about-testimonials">What colleagues say</h2>
+      <p class="section-description">Honest feedback from people I've partnered with across architecture, delivery, and technical leadership.</p>
     </header>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {testimonials.map((testimonial) => (
@@ -84,8 +84,8 @@ import certifications from '../data/certifications.json';
 
   .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: clamp(1.5rem, 4vw, var(--space-8));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: clamp(1rem, 3vw, var(--space-6));
     margin: 0;
     padding: 0;
   }
@@ -95,22 +95,27 @@ import certifications from '../data/certifications.json';
   }
 
   .cert-card {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
     align-items: center;
     text-align: left;
-    gap: var(--space-3);
+    gap: var(--space-6);
+    min-height: 11rem;
   }
 
   .cert-card img {
-    width: 120px;
-    height: 120px;
+    width: 96px;
+    height: 96px;
     object-fit: contain;
+    justify-self: center;
   }
 
   .cert-name {
-    font-size: var(--text-sm);
-    color: var(--color-text-muted);
+    max-width: 18rem;
+    font-size: var(--text-base);
+    color: var(--color-text);
     font-weight: 600;
+    line-height: 1.35;
   }
 
   @media (max-width: 640px) {
@@ -118,5 +123,19 @@ import certifications from '../data/certifications.json';
       max-width: 100%;
     }
 
+    .cert-card {
+      grid-template-columns: 80px minmax(0, 1fr);
+      gap: var(--space-4);
+      min-height: 9rem;
+    }
+
+    .cert-card img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .cert-name {
+      font-size: var(--text-sm);
+    }
   }
 </style>

@@ -13,8 +13,7 @@
   background-color: var(--color-surface);
   border: 1px solid var(--color-border-subtle);
   border-radius: 1rem;
-  box-shadow: 0 1px 2px oklch(0% 0 0 / 0.06);
-  transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base), background-color var(--transition-base);
+  transition: border-color var(--transition-base), transform var(--transition-base), background-color var(--transition-base);
 }
 
 .card::after {
@@ -32,8 +31,7 @@
 .card:focus-within {
   border-color: color-mix(in oklch, var(--color-accent) 35%, transparent);
   background-color: color-mix(in oklch, var(--color-surface) 92%, var(--color-accent) 8%);
-  box-shadow: 0 12px 26px oklch(0% 0 0 / 0.08);
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 .card:hover::after,
@@ -247,6 +245,6 @@
   .card:hover,
   .card:focus-within {
     transform: none;
-    box-shadow: 0 1px 2px oklch(0% 0 0 / 0.06);
+    border-color: var(--color-border-subtle);
   }
 }

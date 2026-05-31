@@ -75,6 +75,9 @@ const games = [
     var emu = null;
 
     playButtons.forEach(function(button) {
+      if (button.dataset.initialized) return;
+      button.dataset.initialized = 'true';
+
       button.addEventListener('click', function() {
         var gameFile = button.getAttribute('data-game');
         if (gameFile && container) {
@@ -83,7 +86,8 @@ const games = [
             emu = null;
           }
           var jsspeccyDiv = document.getElementById('jsspeccy');
-          if (jsspeccyDiv) jsspeccyDiv.innerHTML = '';
+          if (!jsspeccyDiv) return;
+          jsspeccyDiv.innerHTML = '';
           
           container.style.display = 'block';
           
@@ -97,12 +101,14 @@ const games = [
             });
           }
           
-          container.scrollIntoView({ behavior: 'smooth' });
+          var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          container.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
         }
       });
     });
 
-    if (closeButton) {
+    if (closeButton && !closeButton.dataset.initialized) {
+      closeButton.dataset.initialized = 'true';
       closeButton.addEventListener('click', function() {
         if (container) {
           container.style.display = 'none';

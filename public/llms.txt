@@ -30,7 +30,7 @@ Personal portfolio website showcasing 20+ years of experience in software archit
 
 ## Technical Stack
 
-- Astro 5.x (static site generator)
+- Astro 6.x (static site generator)
 - Vanilla CSS with custom properties
 - No JavaScript frameworks
 - View Transitions API for page navigation

@@ -1,15 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ServiceCard from '../components/ServiceCard.astro';
-import AgentLoopOscilloscope from '../components/AgentLoopOscilloscope.astro';
 import testimonials from '../data/testimonials.json';
 import TestimonialCard from '../components/TestimonialCard.astro';
 
 const services = [
-  {
-    title: 'Cloud Architecture at Scale',
-    description: 'Design AWS and SaaS platforms that absorb real traffic, AI workloads, and operational pressure without turning cost or reliability into surprises.',
-  },
   {
     title: 'Technical Leadership',
     description: 'Guide teams through architectural trade-offs, delivery constraints, and platform decisions with the perspective of two decades building production software.',
@@ -20,7 +15,7 @@ const services = [
   },
   {
     title: 'Agentic Systems Exploration',
-    description: 'Shape early agent workflows with clear boundaries, evaluation habits, tool access, and operational thinking before they become production dependencies.',
+    description: 'Shape early agent workflows (clear boundaries, evaluation habits, tool access, operational thinking) before they become production dependencies.',
   },
 ];
 ---
@@ -28,20 +23,19 @@ const services = [
 <BaseLayout title="Home">
   <section class="hero-section shell">
     <div class="hero-content">
-      <div class="hero-visual" aria-hidden="true">
-        <AgentLoopOscilloscope />
+      <div class="hero-visual">
+        <img src="/images/carlos.jpg" alt="Carlos Paramio" class="hero-photo" width="360" height="360" />
       </div>
       <div class="hero-text">
-        <p class="hero-kicker animate-fade-up">Director of Technology at Avallain · Software & cloud architect</p>
+        <p class="hero-kicker animate-fade-up">Director of Technology · Avallain</p>
         <h1 class="text-display font-semibold animate-fade-up" style="animation-delay: 80ms;">
-          Software architecture for cloud and AI systems
+          Software architecture for cloud and AI
         </h1>
         <p class="hero-subtitle text-lg text-muted max-w-xl animate-fade-up" style="animation-delay: 160ms;">
           20+ years designing scalable software and cloud platforms. I now apply that architecture discipline to AI-assisted delivery, agent workflows, and systems that need to survive real production constraints.
         </p>
         <div class="hero-actions animate-fade-up" style="animation-delay: 240ms;">
           <a href="/projects" class="btn btn-primary">See selected work</a>
-          <a href="/about#testimonials" class="btn btn-secondary">Read architecture background</a>
         </div>
       </div>
     </div>
@@ -49,14 +43,13 @@ const services = [
 
   <section class="section shell" aria-labelledby="services-heading">
     <header class="section-heading animate-fade-up">
-      <span class="section-kicker">Capabilities</span>
       <h2 id="services-heading">Cloud systems, technical leadership, and AI-assisted delivery</h2>
       <p class="section-description">
-        Architecture remains the foundation: clear boundaries, resilient platforms, cost awareness, and technical leadership. AI is a new layer in that system, not a replacement for engineering judgment.
+        <strong>Cloud architecture at scale</strong> — Design AWS and SaaS platforms that absorb real traffic, AI workloads, and operational pressure without turning cost or reliability into surprises. Architecture remains the foundation: clear boundaries, resilient platforms, cost awareness, and technical leadership. AI is a new layer in that system, not a replacement for engineering judgment.
       </p>
     </header>
     {services.length > 0 && (
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 animate-stagger">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 animate-stagger">
         {services.map((service) => (
           <ServiceCard {...service} />
         ))}
@@ -66,7 +59,7 @@ const services = [
 
   <section class="section shell section-divider" aria-labelledby="testimonials-heading">
     <header class="section-heading animate-fade-up">
-      <span class="section-kicker">Signals</span>
+      <span class="section-kicker">Endorsements</span>
       <h2 id="testimonials-heading">Trusted by teams building real products</h2>
       <p class="section-description">
         Leaders, founders, and engineers I have partnered with across architecture, delivery, and technical decision-making.
@@ -98,58 +91,26 @@ const services = [
     gap: clamp(2rem, 7vw, 6rem);
   }
 
-  .hero-content::before {
-    content: '';
-    position: absolute;
-    inset: -2rem -1rem;
-    border: 1px solid color-mix(in oklch, var(--color-accent) 16%, transparent);
-    background:
-      linear-gradient(90deg, color-mix(in oklch, var(--color-accent) 10%, transparent) 1px, transparent 1px),
-      linear-gradient(0deg, color-mix(in oklch, var(--color-accent) 8%, transparent) 1px, transparent 1px);
-    background-size: 48px 48px;
-    opacity: 0.55;
-    pointer-events: none;
-    mask-image: radial-gradient(circle at 58% 42%, black, transparent 74%);
-  }
-
   .hero-visual {
     position: relative;
     justify-self: center;
     flex-shrink: 0;
-    width: clamp(210px, 32vw, 420px);
-    height: clamp(168px, 25vw, 336px);
-    color: var(--color-primary);
-    padding: clamp(1rem, 3vw, 2rem);
-    border: 1px solid color-mix(in oklch, var(--color-accent) 28%, transparent);
-    background: color-mix(in oklch, var(--color-surface-raised) 74%, transparent);
-    border-radius: 1.25rem;
-    box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--color-signal) 10%, transparent);
+    width: clamp(240px, 30vw, 360px);
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    border: 1px solid var(--color-border);
+    padding: var(--space-2);
+    background-color: var(--color-surface-raised);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .hero-visual::before,
-  .hero-visual::after {
-    position: absolute;
-    z-index: 1;
-    font-size: var(--text-xs);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-text-subtle);
-    background: var(--color-background);
-    border: 1px solid var(--color-border-subtle);
-    border-radius: 999px;
-    padding: 0.35rem 0.6rem;
-  }
-
-  .hero-visual::before {
-    content: 'System rhythm';
-    top: 0.75rem;
-    left: 0.75rem;
-  }
-
-  .hero-visual::after {
-    content: 'Cloud · delivery · AI';
-    right: 0.75rem;
-    bottom: 0.75rem;
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(1rem - var(--space-2));
   }
 
   .hero-text {
@@ -163,14 +124,13 @@ const services = [
 
   .hero-kicker {
     width: fit-content;
-    font-size: var(--text-xs);
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: var(--text-sm);
+    letter-spacing: 0;
     font-weight: 600;
     color: var(--color-accent);
     border: 1px solid color-mix(in oklch, var(--color-accent) 28%, transparent);
     border-radius: 999px;
-    padding: 0.4rem 0.7rem;
+    padding: 0.4rem 0.8rem;
     background: color-mix(in oklch, var(--color-accent-bg) 70%, transparent);
   }
 
@@ -194,8 +154,8 @@ const services = [
 
     .hero-visual {
       order: -1;
-      width: min(100%, 320px);
-      height: 256px;
+      width: min(100%, 200px);
+      height: auto;
       justify-self: start;
     }
 

@@ -62,9 +62,9 @@ Personal portfolio website built with Astro 5.x for Carlos Paramio, Software & C
 - Add decorative shadows to cards
 - Use generic AI-slop aesthetics
 
-### Astro 5.x Notes
+### Astro 6.x Notes
 - Use `astro:page-load` event (NOT `astro:after-swap`) for View Transitions
-- ViewTransitions component imported from `astro:transitions`
+- `ClientRouter` component imported from `astro:transitions` (renamed from `ViewTransitions` in 6.x)
 - Prefetch enabled for all links
 
 ---

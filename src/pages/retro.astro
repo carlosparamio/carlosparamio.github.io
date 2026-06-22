@@ -35,7 +35,7 @@ const games = [
       <span class="section-kicker">ZX Spectrum</span>
       <h1 id="retro-heading">Retro Games</h1>
       <p class="section-description">
-        Adventure games from my childhood, built with PAWS (Professional Adventure Writing System). Play them directly in your browser.
+        PAWS-format adventure games from my childhood. El Espía is also bundled with <a href="https://github.com/carlosparamio/paws-ai" target="_blank" rel="noopener" class="retro-link-inline">paws-ai</a>, a Ruby interpreter I maintain for the same engine.
       </p>
     </header>
 
@@ -192,6 +192,12 @@ const games = [
     font-size: var(--text-xl);
     font-weight: 600;
     color: var(--color-primary);
+  }
+
+  .retro-link-inline {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .retro-actions {

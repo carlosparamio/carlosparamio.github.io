@@ -1,5 +1,10 @@
 [
   {
+    "name": "paws-ai",
+    "description": "Modern Ruby interpreter for PAWS-format ZX Spectrum text adventures, with AI-powered parser, AI-enhanced graphics, web UI, and debugger. Ships with El Espía as the bundled example game.",
+    "url": "https://github.com/carlosparamio/paws-ai"
+  },
+  {
     "name": "zesarux-mcp-server",
     "description": "MCP server to control the ZEsarUX emulator via ZRCP, enabling AI agents to interact with ZX Spectrum and other retro computers.",
     "url": "https://github.com/carlosparamio/zesarux-mcp-server"

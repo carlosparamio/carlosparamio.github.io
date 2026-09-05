@@ -1,0 +1,40 @@
+---
+interface Props {
+  name: string;
+  summary: string;
+  role: string;
+  image: string;
+  screenshot: string;
+  url: string;
+}
+
+const { name, summary, role, image, screenshot, url } = Astro.props;
+---
+
+<article class="card project-shot-card" data-linked={url ? "true" : "false"}>
+  <div class="project-shot-image-container">
+    <img
+      src={`/images/projects/${image}/${screenshot}`}
+      alt={`${name} website screenshot`}
+      class="project-shot-image"
+      loading="lazy"
+      width="280"
+      height="200"
+    />
+  </div>
+  <div class="project-heading">
+    <span class="project-kicker">{role}</span>
+    {
+      url ? (
+        <h3 class="project-title">
+          <a href={url} target="_blank" rel="noopener noreferrer" class="project-title-link">
+            {name}
+          </a>
+        </h3>
+      ) : (
+        <h3 class="project-title">{name}</h3>
+      )
+    }
+  </div>
+  <p class="project-summary">{summary}</p>
+</article>

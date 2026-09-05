@@ -1,26 +1,106 @@
 [
   {
     "name": "HomenetSpain",
-    "summary": "Development",
+    "summary": "Website for a Costa del Sol real estate agency, architected and built from the ground up with a fast, powerful property search engine.",
+    "role": "Architecture · Development",
     "folder": "homenetspain",
+    "screenshot": "screenshot.png",
     "url": "https://web.archive.org/web/20141003233850/http://homenetspain.com/"
   },
   {
     "name": "Voota",
-    "summary": "Frontend Development",
+    "summary": "Nonprofit platform encouraging citizen participation in politics, where people can learn about and publish opinions on politicians and parties.",
+    "role": "Frontend Development",
     "folder": "voota",
+    "screenshot": "screenshot.png",
     "url": "https://web.archive.org/web/20110615021216/http://voota.es/"
   },
   {
     "name": "Mumumio",
-    "summary": "Development",
+    "summary": "A food marketplace of independent shops: people could review sellers, discover new products, and group purchases to reduce shipping costs.",
+    "role": "Architecture · Development",
     "folder": "mumumio",
+    "screenshot": "screenshot.png",
     "url": "https://web.archive.org/web/20180224060254/http://www.mumumio.com/"
   },
   {
     "name": "Kakoe",
-    "summary": "Development",
+    "summary": "Themed chat where participants log in with Facebook to talk about what they are watching on TV, with comments also shared to Facebook and Twitter.",
+    "role": "Architecture · Development",
     "folder": "kakoe",
+    "screenshot": "screenshot.png",
     "url": "https://web.archive.org/web/20110721160643/http://kakoe.es/"
+  },
+  {
+    "name": "ShopiAds",
+    "summary": "Turns Shopify product collections into dynamic advertisements for other sites, customizable in color and size. One of the first apps in the Shopify App Store.",
+    "role": "Architecture · Development",
+    "folder": "shopiads",
+    "screenshot": "screenshot.png",
+    "url": ""
+  },
+  {
+    "name": "Wanna Wine?",
+    "summary": "A Facebook app to discover new wines: users review a few wines to teach the app their taste, then get recommendations for similar bottles.",
+    "role": "Design · Development",
+    "folder": "wannawine",
+    "screenshot": "screenshot.png",
+    "url": ""
+  },
+  {
+    "name": "rmbrME",
+    "summary": "The digital business card: real-time intelligence on every new contact. It worked over SMS for compatibility with any phone. Built the web application and API, and optimized existing code.",
+    "role": "Backend · API",
+    "folder": "rmbrme",
+    "screenshot": "screenshot.png",
+    "url": ""
+  },
+  {
+    "name": "Prized Collection",
+    "summary": "A Facebook game where players buy or steal friends' photos, frame them, and collect virtual money. Designed the API and the component split that let the game scale.",
+    "role": "Architecture · Development",
+    "folder": "prizedcollection",
+    "screenshot": "screenshot.png",
+    "url": ""
+  },
+  {
+    "name": "Algeciras C.F.",
+    "summary": "Official website for a local soccer club, with a custom CMS for news, articles, events calendar, photo album, and club history.",
+    "role": "Development · CMS",
+    "folder": "algecirascf",
+    "screenshot": "screenshot.png",
+    "url": ""
+  },
+  {
+    "name": "First 5 Santa Clara County",
+    "summary": "A Drupal theme generated from Photoshop templates for an organization supporting early childhood development.",
+    "role": "Frontend · Drupal",
+    "folder": "first5",
+    "screenshot": "screenshot.png",
+    "url": "https://www.first5kids.org/"
+  },
+  {
+    "name": "Grupo 3 Limousine Voyager",
+    "summary": "Site for a tourist and business transfer cooperative, with a custom CMS and an integrated transfer booking flow.",
+    "role": "Development · CMS",
+    "folder": "transferspain",
+    "screenshot": "screenshot.png",
+    "url": ""
+  },
+  {
+    "name": "Está de feria",
+    "summary": "A map of the Algeciras and La Línea fairs with events, voting, and chat, so visitors could follow each stand.",
+    "role": "Development",
+    "folder": "estadeferia",
+    "screenshot": "screenshot.png",
+    "url": ""
+  },
+  {
+    "name": "Algeciras Party",
+    "summary": "Website for a long-running computer party in Algeciras, keeping participants informed about events, news, contests, and locations.",
+    "role": "Development",
+    "folder": "algecirasparty",
+    "screenshot": "screenshot.png",
+    "url": ""
   }
 ]

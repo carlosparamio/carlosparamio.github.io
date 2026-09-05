@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import ProjectCardScreenshot from '../components/ProjectCardScreenshot.astro';
 import projects from '../data/projects.json';
 
 const avallainProducts = [
@@ -59,15 +59,17 @@ const avallainProducts = [
       <div class="project-group-header">
         <h2 class="project-group-title">Earlier builds</h2>
         <p class="project-group-description">
-          Work from my freelancing years, helping startups launch, stabilize, and scale their first serious products.
+          Work from my freelancing years, helping startups launch, stabilize, and scale their first serious products across Europe and the US.
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
-          <ProjectCard 
+          <ProjectCardScreenshot
             name={project.name}
             summary={project.summary}
+            role={project.role}
             image={project.folder}
+            screenshot={project.screenshot}
             url={project.url}
           />
         ))}

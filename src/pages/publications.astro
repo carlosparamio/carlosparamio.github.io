@@ -22,7 +22,7 @@ import publications from '../data/publications.json';
           <a href={book.url} target="_blank" rel="noopener noreferrer" class="card card-link publication-card">
             <span class="publication-kicker">{book.type}</span>
             <h3 class="publication-title">{book.title}</h3>
-            <p class="publication-meta">{book.year}{book.isbn && ` · ISBN: ${book.isbn}`}</p>
+            <p class="publication-meta">{book.published ?? book.year}{book.isbn && ` · ISBN: ${book.isbn}`}</p>
             <p class="publication-description">{book.description}</p>
           </a>
         ))}

@@ -1,6 +1,14 @@
 {
   "books": [
     {
+      "title": "Mythologic: 100 acertijos de lógica y horror cósmico",
+      "description": "Resuelve 100 casos de deducción espacial ambientados en los Mitos de Cthulhu. Coloca investigadores, criaturas y reliquias usando pistas y reglas de visión y amenaza. Tres niveles de dificultad, soluciones detalladas y una única respuesta lógica por puzzle.",
+      "url": "https://www.amazon.es/dp/B0HLT2X3HZ",
+      "published": "14 septiembre 2026",
+      "isbn": "979-8170163212",
+      "type": "Pasatiempos · Tapa blanda"
+    },
+    {
       "title": "The Value of Memories",
       "year": 2011,
       "description": "Mankind has an expiration date. Sooner or later, the Universe will erase every trace of our existence. Jesus Blanco desperately seeks a way out of an ending that seems inevitable.",
